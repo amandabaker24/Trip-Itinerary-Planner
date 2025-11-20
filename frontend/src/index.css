@@ -1,0 +1,85 @@
+:root {
+  --bg: #0b1220;
+  --panel: rgba(255, 255, 255, 0.04);
+  --panel-strong: rgba(255, 255, 255, 0.07);
+  --text: #e8ecf4;
+  --muted: #94a3b8;
+  --primary: #7c3aed;
+  --primary-2: #6366f1;
+  --border: rgba(255, 255, 255, 0.08);
+  --radius: 14px;
+  --shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--text);
+  background: radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.25), transparent 25%),
+    radial-gradient(circle at 90% 10%, rgba(236, 72, 153, 0.18), transparent 22%),
+    var(--bg);
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+a {
+  color: #a5b4fc;
+  text-decoration: none;
+}
+a:hover {
+  color: #c7d2fe;
+}
+
+button {
+  border-radius: 12px;
+  border: 1px solid transparent;
+  padding: 0.65rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.35);
+}
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.05);
+  color: #e8ecf4;
+}
+input:focus,
+select:focus {
+  outline: 2px solid #6366f1;
+  border-color: #6366f1;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.95rem;
+  color: #cbd5e1;
+}
